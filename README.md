@@ -92,7 +92,7 @@ The extension bridges the gap between quick reference lookup and deep textual st
 
 ## Credits
 
-This extension was developed by **Rabbi David Nagarpowers** as an independent project to bring Sefaria's vast library of Jewish texts to Raycast users.
+This extension was developed by **Rabbi David Nagarpowers** (`danyeric123`) as an independent project to bring Sefaria's vast library of Jewish texts to Raycast users.
 
 ### Acknowledgments
 
