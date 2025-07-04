@@ -64,7 +64,6 @@ export default function SearchSefariaCommand() {
           data={categoryResults}
           error={undefined}
           isLoading={false}
-          pagination={{ hasMore: false, onLoadMore: () => {}, pageSize: 20 }}
           selectedCategory={selectedCategoryData.name}
           onSelectResult={handleSelectResult}
           onBackToCategories={handleBackToCategories}

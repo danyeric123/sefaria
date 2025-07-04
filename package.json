@@ -2,9 +2,9 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "sefaria",
   "title": "Sefaria",
-  "description": "Sefaria extension",
+  "description": "Unofficial Raycast extension for searching Sefaria's library of Jewish texts",
   "icon": "extension-icon.png",
-  "author": "danyeric123",
+  "author": "Rabbi David Nagarpowers",
   "license": "MIT",
   "commands": [
     {
