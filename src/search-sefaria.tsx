@@ -28,18 +28,9 @@ export default function SearchSefariaCommand() {
     setSelectedReference(reference);
   };
 
-  const handleBackToCategories = () => {
-    setSelectedCategoryData(null);
-  };
-
-  const handleBackToSearch = () => {
-    setSelectedReference(null);
-    setSelectedCategoryData(null);
-  };
-
   // If viewing a specific source
   if (selectedReference) {
-    return <SourceDetail reference={selectedReference} onBack={handleBackToSearch} />;
+    return <SourceDetail reference={selectedReference} />;
   }
 
   // If viewing results within a category
@@ -64,9 +55,7 @@ export default function SearchSefariaCommand() {
           data={categoryResults}
           error={undefined}
           isLoading={false}
-          selectedCategory={selectedCategoryData.name}
           onSelectResult={handleSelectResult}
-          onBackToCategories={handleBackToCategories}
         />
       </List>
     );
@@ -92,10 +81,10 @@ export default function SearchSefariaCommand() {
           onSelectCategory={handleSelectCategory}
         />
       ) : (
-        <List.Item
+        <List.EmptyView
           title={APP_CONSTANTS.MESSAGES.SUCCESS.START_TYPING}
-          subtitle={APP_CONSTANTS.MESSAGES.SUCCESS.START_TYPING_SUBTITLE}
-          accessories={[{ text: APP_CONSTANTS.ICONS.SEARCH }]}
+          description={APP_CONSTANTS.MESSAGES.SUCCESS.START_TYPING_SUBTITLE}
+          icon={APP_CONSTANTS.ICONS.SEARCH}
         />
       )}
     </List>

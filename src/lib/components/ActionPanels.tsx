@@ -60,7 +60,6 @@ interface SourceDetailActionPanelProps {
   hebrewText: string;
   englishText: string;
   footnotes: string[];
-  onBack: () => void;
 }
 
 /**
@@ -71,7 +70,6 @@ export function SourceDetailActionPanel({
   hebrewText,
   englishText,
   footnotes,
-  onBack,
 }: SourceDetailActionPanelProps) {
   const sefariaUrl = `${APP_CONSTANTS.URLS.SEFARIA_BASE}/${encodeURIComponent(reference)}`;
   const bothTexts = [
@@ -85,7 +83,6 @@ export function SourceDetailActionPanel({
   return (
     <ActionPanel>
       <Action.OpenInBrowser url={sefariaUrl} title="View on Sefaria" shortcut={APP_CONSTANTS.SHORTCUTS.OPEN_BROWSER} />
-      <Action title="Back to Search" onAction={onBack} shortcut={APP_CONSTANTS.SHORTCUTS.BACK} />
       <Action.CopyToClipboard
         title={`Copy Hebrew: ${hebrewText.length > APP_CONSTANTS.SEARCH.COPY_ACTION_PREVIEW_LENGTH ? `${hebrewText.substring(0, APP_CONSTANTS.SEARCH.COPY_ACTION_PREVIEW_LENGTH)}...` : hebrewText}`}
         content={hebrewText}

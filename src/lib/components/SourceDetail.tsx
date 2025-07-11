@@ -10,7 +10,7 @@ import { SourceDetailProps } from "../types/sefaria";
 /**
  * Reusable component for displaying Sefaria source details
  */
-export function SourceDetail({ reference, onBack }: SourceDetailProps) {
+export function SourceDetail({ reference }: SourceDetailProps) {
   const { data, isLoading, error } = useSefariaText(reference);
 
   if (error) {
@@ -37,9 +37,7 @@ Failed to retrieve: **${reference}**
 Fetching **${reference}** from Sefaria database...
 
 ${APP_CONSTANTS.MESSAGES.LOADING.GENERAL}`}
-        actions={
-          <SourceDetailActionPanel reference={reference} hebrewText="" englishText="" footnotes={[]} onBack={onBack} />
-        }
+        actions={<SourceDetailActionPanel reference={reference} hebrewText="" englishText="" footnotes={[]} />}
       />
     );
   }
@@ -152,7 +150,6 @@ ${footnotes.map((note, i) => `${i + 1}. ${note}`).join("\n\n")}
           hebrewText={rawHebrewText}
           englishText={englishText}
           footnotes={footnotes}
-          onBack={onBack}
         />
       }
     />

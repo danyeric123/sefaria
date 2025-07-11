@@ -24,12 +24,8 @@ export default function GetSourceCommand() {
     setSubmittedReference(values.reference);
   };
 
-  const handleBackToForm = () => {
-    setSubmittedReference("");
-  };
-
   if (submittedReference) {
-    return <SourceDetail reference={submittedReference} onBack={handleBackToForm} />;
+    return <SourceDetail reference={submittedReference} />;
   }
 
   return (

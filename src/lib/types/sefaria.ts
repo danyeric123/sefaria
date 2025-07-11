@@ -107,7 +107,6 @@ export interface ProcessedTextData {
  */
 export interface SourceDetailProps {
   reference: string;
-  onBack: () => void;
 }
 
 export interface TextDisplayProps {
@@ -154,6 +153,4 @@ export interface SearchListProps {
   isLoading: boolean;
   pagination: PaginationState;
   onSelectResult: (reference: string) => void;
-  selectedCategory?: string;
-  onBackToCategories?: () => void;
 }
