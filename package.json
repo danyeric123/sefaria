@@ -6,9 +6,8 @@
   "icon": "extension-icon.png",
   "author": "danyeric123",
   "categories": [
-    "Religious",
-    "Jewish",
-    "Reference"
+    "Documentation",
+    "Other"
   ],
   "license": "MIT",
   "commands": [
